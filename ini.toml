@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord TikTok Embed Bot
+After=network.target
+
+[Service]
+User=youruser
+WorkingDirectory=/home/youruser/bot
+ExecStart=/usr/bin/python3 /home/youruser/bot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

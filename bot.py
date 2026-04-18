@@ -1,0 +1,44 @@
+import discord
+import re
+
+# Initialize bot with message content intent
+intents = discord.Intents.default()
+intents.message_content = True 
+
+client = discord.Client(intents=intents)
+
+# Regex to find TikTok links
+TIKTOK_REGEX = r"(https?://(?:www\.|vm\.|vt\.)?tiktok\.com/[^\s?]+)"
+
+@client.event
+async def on_ready():
+    print(f'Logged in as {client.user} (ID: {client.user.id})')
+    print('------')
+
+@client.event
+async def on_message(message):
+    # Don't let the bot respond to itself
+    if message.author == client.user:
+        return
+
+    # Check if message contains a TikTok link
+    match = re.search(TIKTOK_REGEX, message.content)
+    
+    if match:
+        original_url = match.group(1)
+        
+        # Replace the domain with vxtiktok.com for a better embed
+        fixed_url = original_url.replace("tiktok.com", "tnktok.com")
+        
+        # Send the fixed link
+        # Mentioning the user makes it clear who shared it
+        await message.reply(f"Fixed that for you! 🎬\n{fixed_url}", mention_author=False)
+        
+        # Optional: Remove the embed from the original message to save space
+        try:
+            await message.edit(suppress=True)
+        except discord.Forbidden:
+            print("Missing 'Manage Messages' permission to suppress original embed.")
+
+# Replace with your actual bot token
+client.run('Your bot token here')
