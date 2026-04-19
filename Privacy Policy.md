@@ -1,5 +1,3 @@
-Privacy Policy
-
 Effective Date: April 18, 2026
 1. Information We Collect
 
@@ -18,4 +16,4 @@ Effective Date: April 18, 2026
 The Bot uses third-party "fixer" domains to enable video previews. Clicking or viewing a fixed link may expose your IP address to those third-party services and TikTok, as with any external link.
 4. Contact
 
-If you have questions regarding these terms or the bot's operation, please contact the developer via Discord: DaSnowman86.
+If you have questions regarding these terms or the bot's operation, please contact the developer via Discord: https://discord.gg/qrcCHA9g
