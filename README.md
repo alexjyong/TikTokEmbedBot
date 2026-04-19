@@ -8,3 +8,4 @@ You will need to create a service using nano sudo nano /etc/systemd/system/tikto
   sudo systemctl enable tiktokbot
   sudo systemctl start tiktokbot
   
+For support please reach out on Discord: https://discord.gg/qrcCHA9g
