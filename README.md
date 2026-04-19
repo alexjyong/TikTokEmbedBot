@@ -18,8 +18,8 @@ sudo nano /etc/systemd/system/tiktokbot.service
 ```
 There is a ini.toml included in the repo to make your python script run as a service. You will need to use the following commands to insure it starts with the machine and restarts on fail:
 ```bash
-  *sudo systemctl daemon-reload
-  *sudo systemctl enable tiktokbot
-  *sudo systemctl start tiktokbot
+  sudo systemctl daemon-reload
+  sudo systemctl enable tiktokbot
+  sudo systemctl start tiktokbot
 ```  
 For support please reach out on Discord: https://discord.gg/qrcCHA9g
