@@ -1,5 +1,3 @@
-Terms of Service
-
 Effective Date: April 18, 2026
 1. Acceptance of Terms
 
