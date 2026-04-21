@@ -1,0 +1,7 @@
+services:
+  bot:
+    build: .
+    container_name: tiktok-embed-bot
+    restart: unless-stopped
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}

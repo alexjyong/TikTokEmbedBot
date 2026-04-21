@@ -1,5 +1,6 @@
 import discord
 import re
+import os
 
 # Initialize bot with message content intent
 intents = discord.Intents.default()
@@ -40,5 +41,10 @@ async def on_message(message):
         except discord.Forbidden:
             print("Missing 'Manage Messages' permission to suppress original embed.")
 
-# Replace with your actual bot token
-client.run('Your bot token here')
+# Get token from environment variable
+token = os.getenv('DISCORD_TOKEN')
+if not token:
+    print("Error: DISCORD_TOKEN environment variable not set.")
+    exit(1)
+
+client.run(token)
