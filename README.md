@@ -33,7 +33,7 @@ You can also run this bot using Docker for easier deployment and isolation.
 
 ### Using Docker Compose (Recommended)
 
-1. Create a `.env` file in the project root:
+1. Create a `.env` file in the project root or copy the `.env.example` file to `.env`. Fill it with these details:
    ```bash
    DISCORD_TOKEN=your_bot_token_here
    ```
