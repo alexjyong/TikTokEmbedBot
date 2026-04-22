@@ -57,14 +57,20 @@ async def on_message(message):
         
         # Optional: Remove the embed from the original message to save space
         try:
-            await message.edit(suppress=True)
+                await message.edit(suppress=True)
         except discord.Forbidden:
-            print("Missing 'Manage Messages' permission to suppress original embed.")
+                print("Missing 'Manage Messages' permission to suppress original embed.")
 
-# Get token from environment variable
-token = os.getenv('DISCORD_TOKEN')
-if not token:
-    print("Error: DISCORD_TOKEN environment variable not set.")
-    exit(1)
+# --- FOR THIS SECTION IF YOU ARE NOT RUNNING PYTHON IN ENV UNCOMMENT AND INSERT DISCORD TOKEN BELOW ---
 
-client.run(token)
+#TOKEN = 'INSERT-DISCORD-TOKEN'
+
+# --- IF YOU ARE RUNNING WITHIN AN ENVIRONMENT UNCOMMENT THE CODE BELOW ---
+
+#token = os.getenv('INSERT-DISCORD_TOKEN')
+#if not token:
+#    print("Error: DISCORD_TOKEN environment variable not set.")
+#    exit(1)
+
+if __name__ == "__main__":
+    client.run(TOKEN)
